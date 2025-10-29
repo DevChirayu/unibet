@@ -6,7 +6,8 @@
 }
 
 body {
-  background-image: url(../public/assets/images/mobile-landscape.jpg);
+  /* background-image: url(../public/assets/images/mobile-landscape.jpg); */
+  background-color: #141421;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;

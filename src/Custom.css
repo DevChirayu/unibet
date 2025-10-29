@@ -757,7 +757,7 @@ p.error-message {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background-image: url(../public/assets/images/mobile-landscape.jpg);
+    /* background-image: url(../public/assets/images/mobile-landscape.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
