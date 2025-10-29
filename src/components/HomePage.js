@@ -6,6 +6,7 @@ import Header from "./HeaderMobile/Header";
 import FooterMobile from "./FooterMobile/FooterMobile";
 import Footer from "./Footer/Footer";
 import Slider from "./MainSlider/Slider";
+import Games from "./LobbyContent/Games.jsx";
 import SideBarDesktop from "./HeaderMobile/SideBarDesktop";
 import InformationPopup from "./Information/InformationPopup";
 
@@ -32,6 +33,7 @@ function HomePage(props) {
         <SideBarDesktop onTransactionClick={() => setShowPopup(true)}/>
         <div className="main-content">
         <Header />
+        <Games/>
         <Footer />
         {showPopup && (
           <InformationPopup onClose={() => setShowPopup(false)}/>

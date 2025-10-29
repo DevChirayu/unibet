@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import Sidebar from "./Sidebar";
-import Slider from "../MainSlider/Slider";
 import { FaBell } from "react-icons/fa";
 import { FiRefreshCcw } from "react-icons/fi";
 import defaultAvatar from "../../assets/images/profile/default.svg";
@@ -221,7 +220,9 @@ const Header = (props) => {
           </div>
         </>
       )}
-      <Slider searchText={searchText} />
+      {/* <Slider searchText={searchText} /> */}
+      {/* <Games searchText={searchText} /> */}
+      
 
       {isProfilePopupOpen && (
         <ProfileModal onClose={handleCloseProfilePopup} />
