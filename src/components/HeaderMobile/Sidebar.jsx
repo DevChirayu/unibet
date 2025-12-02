@@ -65,10 +65,10 @@ const Sidebar = (props) => {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const handleTransactionClick = () => {
-    setIsPopupOpen(true);
-    onClose(false);
-  };
+  // const handleTransactionClick = () => {
+  //   setIsPopupOpen(true);
+  //   onClose(false);
+  // };
 
   const redirectLobby = (lobbyValue) => {
     let gameType = '';

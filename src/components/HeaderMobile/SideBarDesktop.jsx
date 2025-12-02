@@ -57,11 +57,6 @@ const SideBarDesktop = (props) => {
         });
     };
 
-
-    //   const handleTransactionClick = () => {
-    //     setIsPopupOpen(true);   // popup open
-    //    // onClose(false);         // sidebar close
-    //   };
     const redirectLobby = (lobbyValue) => {
         let gameType = '';
         if (lobbyValue == 'togel') {

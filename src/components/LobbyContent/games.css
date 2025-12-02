@@ -12,7 +12,7 @@
 
 .card_box {
     width: 200px;
-    height: 250px;
+    height: 270px;
     border-radius: 20px;
     background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
     position: relative;
@@ -30,7 +30,7 @@
 
 .card_box:hover {
     transform: scale(1.1);
-    box-shadow: 0 9px 90px rgba(123, 0, 255, 0.23);
+    box-shadow: 0 5px 20px rgba(123, 0, 255, 0.526);
 }
 
 .card_box span {
