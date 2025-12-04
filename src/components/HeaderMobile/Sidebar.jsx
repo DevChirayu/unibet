@@ -116,7 +116,7 @@ const Sidebar = (props) => {
             <span>Lottery</span>
           </li>
           <li className="menu-list"
-            onClick={handleTransactionClick}
+            // onClick={handleTransactionClick}
           >
             <FaRegListAlt />
             <span>{props.t('transaction')}</span>

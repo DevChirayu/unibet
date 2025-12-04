@@ -16,9 +16,9 @@ import NickName from "./components/NickName/NickName.js";
 import Maintenance from "./components/Maintenance/Maintenance.js";
 import LobbyContent from "./components/LobbyContent/LobbyContent";
 import LoaderImg from "./assets/img/ajax-loader.svg";
-import hkbLogo from './assets/img/logo.png'
 import wifiIcon from "./assets/img/wifiIcon.png";
 import closeIcon from "./assets/img/close.png";
+import LoadingComponent from "./components/Loader/LoadingComponent.jsx";
 
 function App(props) {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -279,45 +279,12 @@ function App(props) {
         </div>
       )}
 
-
-      {loadingComp && window.location.pathname !== "/sessionexpirelogout" && window.location.pathname !== "/logout" && (
-        <div className="loader-background">
-          {
-            clientLoader ?
-              (
-                <div className="loader_img">
-                  {clientLoader && (
-                    <img
-                      src={clientLoader === "h" ? hkbLogo : clientLoader}
-                      alt="Client Logo"
-                    />
-                  )}
-                </div>
-              ) :
-              (<></>)
-          }
-          <div id="ajax-loader" className="custom-loader">
-            <div className="custom-loader-line" style={{ width: `${width}%` }}></div>
-            {clientLoader !== '' && (
-              <div className="lds-ripple"></div>
-            )}
-          </div>
-          {/* <div className="loader-footer">Copyright © 2016 {partnerKey && partnerKey.toUpperCase()}. All Rights Reserved.</div> */}
-           <div className="loader-footer">
-            {/* Copyright © {localStorage.getItem("partnerYear")?.toUpperCase()}{" "}
-            {partnerKey && partnerKey.toLowerCase() !== "crazyrich88"
-              ? localStorage.getItem("partner")?.toUpperCase() + "."
-              : ""}
-            {" "}All Rights Reserved. */}
-            {(localStorage.getItem('partnerFlag') == 1)  &&
-              <div className="loader-footer">
-                Copyright © {localStorage.getItem('partnerYear')}{" "}
-                {localStorage.getItem("partner")?.toUpperCase()}. All Rights Reserved.
-              </div>
-            }
-          </div>
-        </div>
-      )}
+      <LoadingComponent 
+        loadingComp={loadingComp} 
+        width={width} 
+        clientLoader={clientLoader} 
+        partnerKey={partnerKey} 
+      />
 
       {!isOnline && (
         <>
@@ -327,7 +294,6 @@ function App(props) {
               <button onClick={closeOnlinePopup} className="btnclose"><img src={closeIcon} alt="closeIcon" /></button>
               <div className="conn_lost_inner">
                 <img src={wifiIcon} alt="wifi" />
-                <h2></h2>
                 <div className="notification_body">
                   <h3>
                     Connection Lost
